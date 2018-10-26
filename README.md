@@ -5,6 +5,9 @@ A playlist app that generates mood music based on the weather in your area â˜€ï¸
 ## Link to deployed version on Heroku:
 https://weatherfm-client.herokuapp.com/
 
+## Link to backend repository: 
+https://github.com/kbunn1991/WeatherFM-Backend-PurpleCobras
+
 ## Features
 
 ### Discover
