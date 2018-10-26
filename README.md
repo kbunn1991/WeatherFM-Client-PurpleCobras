@@ -7,17 +7,24 @@ https://weatherfm-client.herokuapp.com/
 
 ## Link to backend repository: 
 https://github.com/kbunn1991/WeatherFM-Backend-PurpleCobras
+Please pull down both repositories and run npm install to get going! 
 
 ## Features
 
 ### Discover
 The discover feature allows users to generate music that reflects the weather.  While on the discover page, users can choose to add a song to that specific weather playlist, go the next song or the previous song.  There are also advanced settings that allow the user to tweak the discover songs by adjusting song attributes like happiness, popularity and danceability.
 
+Discover makes an API call (GET) to the OpenWeather API in order to pull the weather in your location via geolocation (if you allow it to be enabled). From here, it makes a GET request to the spotify API and the API returns an array of recommended songs based on the songs inputted in onboarding or those supplied by our app in relation to the current weather. Lastly, that makes a GET request to the Youtube API in order to return the video's URL so it can be displayed and played on the page. 
+
 ### Playlists
 While listening to the discover page, users can add songs to their personal weather playlists.  When a user is on the playlists page, they can choose a weather playlist, add, remove and play songs from it.  We have also further integrated WeatherFM with Spotify, so for users with a spotify account, they can login into their account from WeatherFM and export their custom weather playlists to their own Spotify account.
 
+The playlist page makes a simple GET request to our database and recieves all of the songs for your playlist - then rendering them to the page. When you play a song, it makes a request to the Youtube API and renders the song on the page.
+
 ### Customization
 Regardless of a users location or the current weather, they can access all of their different weather playlists as well as use the discover feature.  By changing the current weather, users can generate rainy day playlists when its sunny outside.  Similarly, if a user does not want to share their location, or wants to discover music for another weather, they can manually set the weather.
+
+Our customization alters the request query of the Spotyify API call. Essentially, it alters any elements that you choose through the customization and returns a brand new array of songs.
 
 ## Screenshots
 ### Discover Page
